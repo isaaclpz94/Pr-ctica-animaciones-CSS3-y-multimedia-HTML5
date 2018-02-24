@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url('https://fonts.googleapis.com/css?family=Marvel:400,700');
+
+html, body, #fullpage{
+	margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+::-webkit-scrollbar
+{
+  width: 0;
+}
+
+.fixed{
+	position: fixed;
+}
+
+.container-full{
+	width: 100%;
+}
+
+.activo{
+  background-color: white !important;
+}
+
+video{
+  position: relative;
+  z-index: -1;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.atras{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  z-index: 1000;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+.atras:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.seccion1, .seccion2, .seccion3, .seccion4{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-color: #003d4ce6;
+  border-bottom: 1px solid white;
+}
+
+#a_curiosidad span{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.content {
+  display: table;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 70%;
+}
+
+.inner h1{
+  text-align: center;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+}
+
+.inner p{
+  color: white;
+  font-family: 'Marvel', sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.img-animal{
+  text-align: center;
+}
+
+#reproducir_oso, #reproducir_zorro, #reproducir_foca, #reproducir_orca{
+  cursor: pointer;
+  float: left;
+}
+
+.menu-scroll-dcha{
+  position: fixed;
+  z-index: 1000;
+  right: 10px;
+  top: 50%;
+}
+
+.menu-scroll-dcha ul{
+  list-style: none;
+
+}
+
+.menu-scroll-dcha li a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #a1a1a1;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+audio{
+  margin: 10px auto;
+  width: 100%;
+}
+
+.datos-foca{
+  color: white;
+  margin-top: 130px;
+}
+
+.datos-fauna{
+  background-color: #ffffff30;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.datos-fauna span{
+  padding-left: 12px;
+  display: block;
+}
+
+.datos-1{
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+.datos-1 img{
+  width: 60px;
+}
+
+.contenedor-datos{
+  width: fit-content;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  min-width: 70%;
+  height: 120px;
+}
+
+.contenedor-titulo{
+  padding: 10px 0;
+}
+
+.contenedor-imagen span{
+  width: fit-content;
+  margin: auto;
+}
+
+.titulo-dato{
+  display: block;
+  text-align: center;
+}
+
+
+@media (max-width: 767px){
+  video{
+    margin-left: -50%;
+  }
+
+  .img-animal img{
+    width: 215px;
+    height: auto;
+  }
+
+  .datos-foca{
+    margin: 0;
+  }
+}

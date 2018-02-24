@@ -1,0 +1,340 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url('https://fonts.googleapis.com/css?family=Marvel:400,700');
+
+html, body{
+	height: 100%;
+}
+
+.contenedor-full{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    position: relative;
+}
+
+.suelo{
+	width: 2000px;
+	position: absolute;
+    bottom: 0;
+}
+
+.sol{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: yellow;
+    background: #FFF5C3;
+    box-shadow: 0px 0px 60px #FFF5C3;
+    z-index: 1;
+    right: 0px;
+    margin: -10px -10px 0 0;
+    animation: brillar 1s linear infinite alternate;
+}
+
+.cielo{
+	width: 100%;
+    height: 100%;
+    background: #365fb1;
+    background: -moz-linear-gradient(top, #365fb1 0%, #bccad3 100%);
+    background: -webkit-linear-gradient(top, #365fb1 0%, #bccad3 100%);
+    background: linear-gradient(to bottom, #365fb1 0%, #bccad3 100%);
+}
+
+.tienda{
+    position: absolute;
+    bottom: 51px;
+    left: 727px;
+    background: url("../imgs/tienda.png") no-repeat;
+    width: 189px;
+    height: 340px;
+    background-size: 190px;
+    cursor: pointer;
+}
+
+/*.tienda::before{
+    content: " ";
+    width: 200px;
+    height: 380px;
+    display: block;
+    margin: auto;
+    
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 13px #ffffff59;
+    animation: resaltar 1s infinite alternate;
+}*/
+
+.cabaña{
+    cursor: pointer;
+    position: absolute;
+    bottom: 51px;
+    left: 1030px;
+    background: url("../imgs/cabaña.png") no-repeat;
+    width: 459px;
+    height: 400px;
+    background-size: 455px;
+}
+
+/*.cabaña::before{
+    content: " ";
+    width: 450px;
+    height: 460px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 13px #ffffff59;
+    animation: resaltar 1s infinite alternate;
+}*/
+
+.iglu{
+    cursor: pointer;
+	position: absolute;
+    bottom: 50px;
+    left: 100px;
+    background: url("../imgs/iglu.png") no-repeat;
+    width: 489px;
+    height: 240px;
+}
+
+/*.iglu::before{
+    content: " ";
+    width: 500px;
+    height: 260px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 13px #ffffff59;
+    animation: resaltar 1s infinite alternate;
+}*/
+
+#iglu_partes, #iglu_temperatura, #tienda_curiosidad, #cabaña_curiosidad{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(red, yellow);
+    position: absolute;
+    display: none;
+    z-index: 5000;
+}
+
+#iglu_partes{
+    left: 80px;
+    top: 150px;
+}
+
+#iglu_temperatura{
+    left: 310px;
+    top: 50px;
+}
+
+#tienda_curiosidad{
+    left: 70px;
+    top: 290px;
+}
+
+
+#cabaña_curiosidad{
+    left: 100px;
+    top: 290px;
+}
+
+.pinguino{
+	width: 57px;
+	height: 100px;
+	position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+
+.pinguino-dcha{
+    background: url('../imgs/sprites/pinguino.png') no-repeat left center;
+}
+
+.pinguino-izq{
+    background: url('../imgs/sprites/pinguino-izq.png') no-repeat left center;
+}
+
+.pinguino-andar{
+    animation: play 0.3s steps(2) infinite;
+}
+
+.modal-title{
+    display: inline-block;
+    font-size: 50px;
+}
+
+.modal-content img{
+    width: 50%;
+    float: left;
+}
+
+.modal-content p{
+    width: 100%;
+    float: left;
+    color: white;
+    text-align: justify;
+    padding: 5px;
+    font-family: 'Marvel', sans-serif;
+}
+
+.modal-body::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.modal-content{
+    background-color: #000000d1 !important;
+}
+
+.modal-header{
+    text-align: center;
+}
+
+.modal-header h4{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}
+
+.modal-header .close{
+    color: #fff;
+    opacity: 1;
+}
+
+.texto-modal{
+    display: table;
+}
+
+.texto-modal p{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vivienda-contenido{
+    position: relative;
+    top: 300px;
+    margin: auto;
+    width: 400px;
+    background-color: #0000003d;
+    padding: 10px 30px;
+}
+
+.vivienda-contenido h1{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    border-bottom: 1px solid white;
+}
+
+.vivienda-contenido p{
+    color: white;
+    text-align: justify;
+}
+
+.atras{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  z-index: 1000;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+.atras:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+@keyframes play {
+    from{background-position: 0px}
+    to{ background-position: -115px; }
+}
+
+@keyframes brillar{
+    from{
+        box-shadow: 0px 0px 20px #FFF5C3;
+    }
+
+    to{
+        box-shadow: -9px 7px 60px #FFF5C3;
+    }
+}
+
+
+@keyframes resaltar{
+    from{
+        box-shadow: 0px 0px 20px 13px #ffffff59;
+    }
+
+    to{
+        box-shadow: 0px 0px 20px 15px #ffffffab;
+    }
+}
+
+@media (max-width: 767px){
+    .iglu{
+        background-size: 250px;
+        width: 249px;
+        height: 119px;
+        left: 35px;
+        bottom: 35px;
+    }
+
+    .pinguino{
+        background-size: 70px;
+        width: 35px;
+        height: 40px;
+    }
+
+    .tienda{
+        background-size: 100px;
+        height: 180px;
+        width: 100px;
+        bottom: 35px;
+        left: 290px;
+    }
+
+    .cabaña{
+        width: 167px;
+        height: 140px;
+        background-size: 165px;
+        left: 430px;
+    }
+
+    #iglu_partes, #iglu_temperatura, #tienda_curiosidad, #cabaña_curiosidad{
+        width: 20px;
+        height: 20px;
+    }
+
+    #iglu_partes{
+        left: 80px;
+        top: 50px;
+    }
+
+    #iglu_temperatura{
+        left: 168px;
+        top: 72px;
+    }
+
+    #tienda_curiosidad{
+        left: 48px;
+        top: 112px;
+    }
+
+    #cabaña_curiosidad{
+        left: 50px;
+        top: 90px;
+    }
+    
+    @keyframes play {
+        from{background-position: 0px}
+        to{ background-position: -70px; }
+    }
+    
+}

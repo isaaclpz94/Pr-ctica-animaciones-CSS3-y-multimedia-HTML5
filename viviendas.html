@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Viviendas</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/estilos_viviendas.css">
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/efectos_viviendas.js"></script>
+</head>
+<body>
+	<!-- Iglú partes -->
+	<div id="modal_iglu_partes" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title">Estructura de un iglú</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">×</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <img src="imgs/iglu_partes.png" alt="Estructura de un iglú"/>
+		        <div class="texto-modal">
+		        	<p>El iglú tiene una entrada muy baja, que sirve como pasillo y como guardador del equipaje. Una vez dentro, a mayor altura que la entrada, encontramos la zona de estancia, la cual puede tener ventanas y un hoyo de ventilación en la parte superior. Toda la estructura ha sido perfeccionada durante siglos y ha logrado que los esquimales vivan cómodamente</p>
+		        </div>
+		      </div>
+		  </div>
+		</div>
+	</div>
+
+	<!-- Iglú temperatura -->
+	<div id="modal_iglu_temperatura" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title">Temperatura</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">×</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <img src="imgs/iglu_temperatura.png" alt="Temperatura de un iglú"/>
+		        <div class="texto-modal">
+		        	<p>Dentro puede haber un cambio de temperatura de unos 40º respecto al exterior. Esto se consigue gracias al pequeño fuego que hay dentro y a que el hielo actúa como aislante del exterior. Esto consigue una temperatura muy cómoda para sus habitantes</p>
+		        </div>
+		      </div>
+		  </div>
+		</div>
+	</div>
+
+	<!-- Tienda curiosidad -->
+	<div id="modal_tienda_curiosidad" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title">¿Por que viven en tiendas durante el verano?</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">×</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <img src="imgs/tipi.jpg" alt="Tipi"/>
+		        <div class="texto-modal">
+		        	<p>Las tiendas están hechas con pieles y de manera que puedan ser montadas y desmontadas rápidamente. Gracias a esto pueden perseguir a animales para cazarlos siguiendo su rastro y moviéndose estratégicamente.</p>
+		        </div>
+		      </div>
+		  </div>
+		</div>
+	</div>
+
+	<!-- Cabaña curiosidad -->
+	<div id="modal_cabaña_curiosidad" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title">Características</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">×</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <img src="imgs/cabaña.jpg" alt="Cabaña"/>
+		        <div class="texto-modal">
+			        <p>Las cabañas son la vivienda moderna de los esquimales. A diferencia de la tienda, la cabaña, lógicamente, no cambia de ubicación nunca y es una vivienda mas fija para los esquimales</p>
+			    </div>
+		      </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="contenedor-full">
+		<!-- Sol -->
+		<div class="sol">
+		</div>
+
+		<div class="cielo">
+			<!-- Suelo -->
+			<img src="imgs/suelo_polar.png" class="suelo"/>
+			
+			<!-- Iglu -->
+			<div class="iglu" id="iglu">
+				<a href="#" id="iglu_partes" data-toggle="modal" data-target="#modal_iglu_partes"></a>
+				<a href="#" id="iglu_temperatura" data-toggle="modal" data-target="#modal_iglu_temperatura"></a>
+			</div>
+			
+			<!-- Tienda -->
+			<div class="tienda" id="tienda">
+				<a href="#" id="tienda_curiosidad" data-toggle="modal" data-target="#modal_tienda_curiosidad"></a>
+			</div>
+
+			<!-- Cabaña -->
+			<div class="cabaña" id="cabaña">
+				<a href="#" id="cabaña_curiosidad" data-toggle="modal" data-target="#modal_cabaña_curiosidad"></a>
+			</div>
+			
+			<!-- Pinguino -->
+			<div class="pinguino pinguino-dcha"></div>
+
+			<!-- Datos -->
+			<div class="vivienda-contenido">
+				<div class="vivienda-titulo">
+					<h1 class="text-center">Viviendas en el ártico</h1>
+				</div>
+				<div class="vivienda-texto">
+					<p>Selecciona una vivienda para mostrar su descripción</p>
+				</div>
+			</div>
+
+			<!-- Botón volver -->
+			<a href="index.html" class="atras" title="volver"><span class="glyphicon glyphicon-arrow-left"></span> Volver</a>
+		</div>
+	</div>
+
+</body>
+</html>

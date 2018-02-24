@@ -1,0 +1,582 @@
+@font-face {
+    font-family: "Almonte Snow";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("../fonts/almonte snow.woff") format("woff"), url("../fonts/almonte snow.TTF") format("truetype");
+}
+
+html, body{
+	height: 100%;
+}
+
+::-webkit-scrollbar
+{
+	width: 0;
+}
+
+.animacion-off{
+	animation-name: none !important;
+}
+
+.skip{
+	position: fixed;
+    z-index: 3;
+    right: 8px;
+    top: 50%;
+    line-height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+h1.salva-artico{
+	font-family: 'Almonte Snow';
+	position: relative;
+	text-align: center;
+    z-index: 2;
+    color: white;
+    top: 110px;
+    font-size: 110px;
+}
+
+.container-full{
+	width: 100%;
+}
+
+.contenedor-anim1{
+	position: relative;
+	height: 3000px;
+	overflow: hidden;
+}
+
+.oceano{
+	width: 100%;
+	height: 2223px;
+	bottom: 0px;
+	opacity: .7;
+	z-index: 2;
+	position: absolute;
+	background-color: blue;
+	background: #408cff;
+    background: -moz-linear-gradient(top, #408cff 0%, #0366fb 31%, #003482 95%, #fc8 95.5%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #408cff), color-stop(31%, #0366fb), color-stop(95%, #003482), color-stop(95.5%, #fc8));
+    background: -webkit-linear-gradient(top,  #408cff 0%, #0366fb 31%, #003482 95%, #fc8 95.5%);
+    background: -o-linear-gradient(top, #408cff 0%, #0366fb 31%, #003482 95%, #fc8 95.5%);
+    background: -ms-linear-gradient(top, #408cff 0%, #0366fb 31%, #003482 95%, #fc8 95.5%);
+    background: linear-gradient(to bottom, #408cff 0%, #0366fb 31%, #003482 95%, #fc8 95.5%);
+}
+
+.cielo{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #365fb1;
+    background: -moz-linear-gradient(top, #365fb1 0%, #bccad3 100%);
+    background: -webkit-linear-gradient(top, #365fb1 0%, #bccad3 100%);
+    background: linear-gradient(to bottom, #365fb1 0%, #bccad3 100%);
+}
+
+.sol{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: yellow;
+	background: #FFF5C3;
+	box-shadow: 0px 0px 60px #FFF5C3;
+	z-index: 1;
+	right: 0px;
+	margin: -10px -10px 0 0;
+	animation: brillar 1s linear infinite alternate;
+}
+
+.iceberg{
+    width: 720px;
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: mover-iceberg 10s ease-in-out infinite alternate, flotar 2s ease-in-out infinite alternate;
+
+}
+
+.pinguino{
+	width: 100px;
+    position: absolute;
+    top: 430px;
+    left: 56%;
+    transform: translate(-50%);
+    animation: mover-pinguino 10s ease-in-out infinite alternate, flotar 2s ease-in-out infinite alternate, chapuzon 2s linear 2s 1 normal, nadar-fuera 2s linear 4s 1 normal;
+}
+
+.absolute{
+	position: absolute;
+}
+
+/* ANIMACIONES SUPERFICIE */
+@keyframes mover-iceberg{
+	from{
+		margin-left: -50px;
+	}
+	to{
+		margin-left: 50px;
+	}
+}
+
+@keyframes mover-pinguino{
+	from{
+		margin-left: -50px;
+	}
+	to{
+		margin-left: 50px;
+	}
+}
+
+@keyframes flotar{
+	from{
+		margin-top: -5px;
+	}
+	to{
+		margin-top: 10px;
+	}
+}
+
+@keyframes brillar{
+	from{
+		box-shadow: 0px 0px 20px #FFF5C3;
+	}
+
+	to{
+		box-shadow: -9px 7px 60px #FFF5C3;
+	}
+}
+
+@keyframes chapuzon{
+	0%{
+		transform: rotate(25deg);
+		top: 420px;
+		left: 56%;
+	}
+	10%{
+		transform: rotate(45deg);
+		top: 410px;
+		left: 58%;
+	}
+	20%{
+		transform: rotate(90deg);
+		top: 460px;
+		left: 62%;
+	}
+	30%{
+		top: 510px;
+		left: 68%;
+	}
+	40%{
+		top: 560px;
+		left: 68%;
+	}
+	50%{
+		top: 760px;
+		left: 68%;
+		transform: rotate(180deg);
+	}
+	100%{
+		top: 860px;
+		left: 68%;
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes nadar-fuera{
+	0%{
+		top: 860px;
+		left: 68%;
+		transform: rotate(180deg);
+	}
+
+	25%{
+		top: 880px;
+		left: 71%;
+		transform: rotate(160deg);
+	}
+	50%{
+		top: 900px;
+		left: 76%;
+		transform: rotate(120deg);
+	}
+	75%{
+		top: 920px;
+		left: 83%;
+		transform: rotate(90deg);
+	}
+	100%{
+		top: 920px;
+		left: 100%;
+		transform: rotate(90deg);
+	}
+}
+
+/**************** DENTRO DEL OCÉANO **************************************/
+.ballena{
+	position: absolute;
+	width: 481px;
+	top: 1500px;
+	left: -481px;
+	animation: ballena-nadar 6s ease-in-out;
+}
+
+.krill{
+	position: absolute;
+	z-index: 2;
+	right: -10px;
+	top: 1650px;
+	width: 20px;
+	animation: krill-nadar 16s ease-in-out;
+}
+
+.foca{
+	width: 100px;
+}
+
+.algas-marinas-1, .algas-marinas-2, .algas-marinas-3, .algas-marinas-4, .algas-marinas-5, .algas-marinas-6, .algas-marinas-7{
+	position: absolute;
+    width: 10px;
+    background: #1B580C;
+    bottom: 103px;
+    z-index: 3;
+}
+
+.algas-marinas-1:before, .algas-marinas-2:before, .algas-marinas-3:before, .algas-marinas-4:before, .algas-marinas-5:before, .algas-marinas-6:before, .algas-marinas-7:before{
+	position: absolute;
+    content: "";
+    width: 40px;
+    left: -166%;
+    bottom: 2%;
+    background-repeat: repeat;
+    background-image: radial-gradient(circle at 23% 10%, #1B580C 12px, transparent 13px);
+    background-size: 85px 15px;
+}
+
+.algas-marinas-1:after, .algas-marinas-2:after, .algas-marinas-3:after, .algas-marinas-4:after, .algas-marinas-5:after, .algas-marinas-6:after, .algas-marinas-7:after{
+	position: absolute;
+    content: "";
+    width: 200%;
+    height: 10%;
+    background: #1B580C;
+    border-radius: 0 50% 0 50%;
+    top: -12%;
+    left: -60%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.algas-marinas-1{
+	left: 30px;
+	height: 240px;
+}
+.algas-marinas-1:before{
+	height: 240px;
+}
+
+.algas-marinas-2{
+	left: 60px;
+	height: 190px;
+}
+.algas-marinas-2:before{
+	height: 190px;
+}
+
+.algas-marinas-3{
+	left: 90px;
+	height: 260px;
+}
+.algas-marinas-3:before{
+	height: 260px;
+}
+
+.algas-marinas-4, .algas-marinas-4:before, .algas-marinas-4:after, .algas-marinas-5, .algas-marinas-5:before, .algas-marinas-5:after, .algas-marinas-6, .algas-marinas-6:before,.algas-marinas-6:after{
+	background-image: radial-gradient(circle at 23% 10%, #204018 12px, transparent 13px);
+	z-index: 2;
+}
+
+.algas-marinas-4{
+	left: 51px;
+	height: 260px;
+	background: #204018;
+}
+.algas-marinas-4:before{
+	height: 260px;
+}
+.algas-marinas-4:after{
+	background: #204018;
+}
+
+.algas-marinas-5{
+	left: 79px;
+	height: 210px;
+	background: #204018;
+}
+.algas-marinas-5:before{
+	height: 210px;
+}
+.algas-marinas-5:after{
+	background: #204018;
+}
+
+.algas-marinas-6{
+	left: 113px;
+	height: 280px;
+	background: #204018;
+}
+.algas-marinas-6:before{
+	height: 280px;
+}
+.algas-marinas-6:after{
+	background: #204018;
+}
+
+.caracola{
+	width: 60px;
+	position: absolute;
+	z-index: 2;
+	bottom: 72px;
+	left: 50%;
+    transform: translate(-50%);
+}
+
+.piedralga{
+	width: 270px;
+	position: absolute;
+	z-index: 2;
+	bottom: 86px;
+	right: 0px;
+}
+
+.contenedor-burbujas{
+	position: absolute;
+	bottom: 500px;
+	width: 100%;
+}
+
+.burbuja-co2{
+	margin-right: auto;
+}
+
+.burbuja-fauna{
+	margin-left: auto;
+}
+
+.burbuja{
+	animation: burbuja-animacion 1s linear infinite;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	
+    height: 300px;
+    width: 300px;
+    line-height: 300px;
+    text-align: center;
+	position: relative;
+    z-index: 2;
+}
+
+.burbuja span{
+	color: white;
+    font-weight: bold;
+    font-size: 43px;
+}
+
+.burbuja:after {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	
+	content: "";
+    height: 280px;
+	left: 10px;
+	position: absolute;
+	width: 280px;
+}
+
+.contenedor-burbujas a{
+	text-decoration: none;
+}
+
+/**** Animaciones dentro del océano ****/
+
+@keyframes ballena-nadar{
+	from{
+		left: -481px;
+	}
+	to{
+		left: 100%;
+	}
+}
+
+@keyframes krill-nadar{
+	from{
+		right: : 0px;
+	}
+	to{
+		right: 300%;
+	}
+}
+
+@keyframes burbuja-animacion {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+  97%, 100% {
+    transform: scale(1);
+  }
+}
+
+
+/********* RESPONSIVE ***********/
+
+@media (max-width: 767px){
+	h1.salva-artico{
+		font-size: 51px;
+	}
+
+	.iceberg{
+		/*width: 600px;*/
+		width: 330px;
+    	top: 418px;
+	}
+
+	.oceano{
+		height: 2380px;
+	}
+
+	.pinguino{
+		top: 460px;
+	}
+
+	.sol{
+		width: 140px;
+		height: 140px;
+	}
+
+	.caracola{
+		bottom: 45px;
+	}
+
+	.burbuja-viviendas, .burbuja-co2, .burbuja-fauna{
+		margin: 0 auto !important;
+	}
+
+	div.burbuja{
+		height: 250px;
+		width: 250px;
+		line-height: 250px;
+	}
+
+	div.burbuja:after{
+		height: 230px;
+		width: 230px;
+	}
+
+	div.contenedor-burbujas{
+		bottom: 320px
+	}
+
+	@keyframes chapuzon{
+		0%{
+			transform: rotate(25deg);
+			top: 460px;
+			left: 56%;
+		}
+		10%{
+			transform: rotate(45deg);
+			top: 450px;
+			left: 58%;
+		}
+		20%{
+			transform: rotate(90deg);
+			top: 500px;
+			left: 73%;
+		}
+		30%{
+			top: 550px;
+			left: 73%;
+		}
+		40%{
+			top: 600px;
+			left: 75%;
+		}
+		50%{
+			top: 700px;
+			left: 75%;
+			transform: rotate(180deg);
+		}
+		100%{
+			top: 800px;
+			left: 75%;
+			transform: rotate(180deg);
+		}
+	}
+
+	@keyframes nadar-fuera{
+		0%{
+			top: 800px;
+			left: 75%;
+			transform: rotate(180deg);
+		}
+
+		25%{
+			top: 820px;
+			left: 78%;
+			transform: rotate(160deg);
+		}
+		50%{
+			top: 840px;
+			left: 83%;
+			transform: rotate(120deg);
+		}
+		75%{
+			top: 860px;
+			left: 90%;
+			transform: rotate(90deg);
+		}
+		100%{
+			top: 860px;
+			left: 100%;
+			transform: rotate(90deg);
+		}
+	}	
+
+}
